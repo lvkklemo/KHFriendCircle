@@ -10,7 +10,6 @@
 		841914CF1E5D3BA500155584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841914CE1E5D3BA500155584 /* main.m */; };
 		841914D21E5D3BA500155584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841914D11E5D3BA500155584 /* AppDelegate.m */; };
 		841914D51E5D3BA500155584 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841914D41E5D3BA500155584 /* ViewController.m */; };
-		841914D81E5D3BA500155584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841914D61E5D3BA500155584 /* Main.storyboard */; };
 		841914DA1E5D3BA500155584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841914D91E5D3BA500155584 /* Assets.xcassets */; };
 		841914DD1E5D3BA500155584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841914DB1E5D3BA500155584 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		841914D11E5D3BA500155584 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		841914D31E5D3BA500155584 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		841914D41E5D3BA500155584 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		841914D71E5D3BA500155584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		841914D91E5D3BA500155584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841914DC1E5D3BA500155584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841914DE1E5D3BA500155584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,11 +56,11 @@
 		841914CC1E5D3BA500155584 /* KHFriendCircle */ = {
 			isa = PBXGroup;
 			children = (
+				841914E41E5D3DD300155584 /* Classes */,
 				841914D01E5D3BA500155584 /* AppDelegate.h */,
 				841914D11E5D3BA500155584 /* AppDelegate.m */,
 				841914D31E5D3BA500155584 /* ViewController.h */,
 				841914D41E5D3BA500155584 /* ViewController.m */,
-				841914D61E5D3BA500155584 /* Main.storyboard */,
 				841914D91E5D3BA500155584 /* Assets.xcassets */,
 				841914DB1E5D3BA500155584 /* LaunchScreen.storyboard */,
 				841914DE1E5D3BA500155584 /* Info.plist */,
@@ -77,6 +75,53 @@
 				841914CE1E5D3BA500155584 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		841914E41E5D3DD300155584 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				841914E51E5D3DD300155584 /* Controller */,
+				841914E61E5D3DD300155584 /* Lib */,
+				841914E71E5D3DD300155584 /* Model */,
+				841914E81E5D3DD300155584 /* Other */,
+				841914E91E5D3DD300155584 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		841914E51E5D3DD300155584 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		841914E61E5D3DD300155584 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		841914E71E5D3DD300155584 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		841914E81E5D3DD300155584 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		841914E91E5D3DD300155584 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +184,6 @@
 			files = (
 				841914DD1E5D3BA500155584 /* LaunchScreen.storyboard in Resources */,
 				841914DA1E5D3BA500155584 /* Assets.xcassets in Resources */,
-				841914D81E5D3BA500155584 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		841914D61E5D3BA500155584 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				841914D71E5D3BA500155584 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		841914DB1E5D3BA500155584 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
