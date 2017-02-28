@@ -19,6 +19,15 @@
     
      self.title = @"WeChat";
     
+    if ([self rightBarButtonItem] != nil) {
+        self.navigationItem.rightBarButtonItem = [self rightBarButtonItem];
+    }
+    
+}
+
+-(UIBarButtonItem *) rightBarButtonItem
+{
+    return nil;
 }
 
 @end
