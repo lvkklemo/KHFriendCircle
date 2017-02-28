@@ -7,31 +7,89 @@
 //
 
 #import "LKTimeLineViewController.h"
+#import "UIBarButtonItem+Lite.h"
+#import "MMPopupView.h"
+#import "MMPopupItem.h"
+#import "MMSheetView.h"
+#import "LKImagesSendViewController.h"
 
-@interface LKTimeLineViewController ()
+@interface LKTimeLineViewController ()<KKImagesSendViewControllerDelegate>
 
+@property (nonatomic, strong) NSMutableArray *items;
+
+@property (nonatomic, strong) NSMutableDictionary *itemDic;
+
+@property (nonatomic, strong) NSMutableDictionary *commentDic;
 @end
 
 @implementation LKTimeLineViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        _items = [NSMutableArray array];
+        
+        _itemDic = [NSMutableDictionary dictionary];
+        
+        _commentDic = [NSMutableDictionary dictionary];
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - BarButtonItem
+
+
+-(UIBarButtonItem *)rightBarButtonItem
+{
+    UIBarButtonItem *item = [UIBarButtonItem icon:@"Camera" selector:@selector(onClickCamera:) target:self];
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPressCamera:)];
+    [item.customView addGestureRecognizer:recognizer];
+    return item;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) onLongPressCamera:(UIGestureRecognizer *) gesture
+{
+    LKImagesSendViewController *controller = [[LKImagesSendViewController alloc] initWithImages:nil];
+    controller.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:navController animated:YES completion:nil];
 }
-*/
+
+
+
+-(void) onClickCamera:(id) sender
+{
+    MMPopupItemHandler block = ^(NSInteger index){
+        switch (index) {
+            case 0:
+                //[self captureViedo];
+                break;
+            case 1:
+                //[self takePhoto];
+                break;
+            case 2:
+                //[self pickFromAlbum];
+                break;
+            default:
+                break;
+        }
+    };
+    
+    NSArray *items = @[MMItemMake(@"小视频", MMItemTypeNormal, block),
+                       MMItemMake(@"拍照", MMItemTypeNormal, block),
+                       MMItemMake(@"从相册选取", MMItemTypeNormal, block)];
+    
+    MMSheetView *sheetView = [[MMSheetView alloc] initWithTitle:@"" items:items];
+    
+    [sheetView show];
+}
 
 @end
