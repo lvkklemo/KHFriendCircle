@@ -18,7 +18,6 @@
 #define AvatarRightMargin 15
 #define AvatarPadding 2
 
-
 #define NickFont [UIFont systemFontOfSize:20]
 
 #define SignFont [UIFont systemFontOfSize:11]
