@@ -8,6 +8,6 @@
 
 #import "LKBaseTimeLineViewController.h"
 
-@interface LKTimeLineViewController : LKBaseTimeLineViewController
+@interface LKTimeLineViewController : UIViewController
 
 @end

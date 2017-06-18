@@ -39,26 +39,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initTableView];
-    
     [self initHeader];
     
     [self initFooter];
     
 }
 
--(void) initTableView
-{
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    //_tableView.backgroundColor = [UIColor darkGrayColor];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.separatorInset = UIEdgeInsetsZero;
-    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
-        _tableView.layoutMargins = UIEdgeInsetsZero;
-    }
-    [self.view addSubview:_tableView];
-}
+//-(void) initTableView
+//{
+    //_tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+//    //_tableView.backgroundColor = [UIColor darkGrayColor];
+//    _tableView.delegate = self;
+//    _tableView.dataSource = self;
+//    _tableView.separatorInset = UIEdgeInsetsZero;
+//    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+//        _tableView.layoutMargins = UIEdgeInsetsZero;
+//    }
+//    [self.view addSubview:_tableView];
+//}
 
 -(void) initHeader
 {

@@ -9,18 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MLLabel.h"
 #import "MBProgressHUD.h"
-
-#define TableHeaderHeight 290*([UIScreen mainScreen].bounds.size.width / 375.0)
-#define CoverHeight 240*([UIScreen mainScreen].bounds.size.width / 375.0)
-
-
-#define AvatarSize 70*([UIScreen mainScreen].bounds.size.width / 375.0)
-#define AvatarRightMargin 15
-#define AvatarPadding 2
-
-#define NickFont [UIFont systemFontOfSize:20]
-
-#define SignFont [UIFont systemFontOfSize:11]
+#import "HeaderView.h"
 
 @interface LKBaseViewController : UIViewController
 //普通文本
